@@ -7,7 +7,6 @@ const Register = () => {
   const [name, namechange] = useState("");
   const [email, emailchange] = useState("");
   const [password, passwordchange] = useState("");
-  const [phone, phonechange] = useState("");
   const [gender, genderchange] = useState("male");
 
   const navigate = useNavigate();
@@ -19,18 +18,19 @@ const Register = () => {
       isproceed = false;
       errormessage += " Username";
     }
-    if (id === null || id === "") {
+    if (id === null || name === "") {
       isproceed = false;
       errormessage += " Fullname";
     }
-    if (id === null || id === "") {
+    if (id === null || email === "") {
       isproceed = false;
       errormessage += " Email";
     }
-    if (id === null || id === "") {
+    if (id === null || password === "") {
       isproceed = false;
       errormessage += " Password";
     }
+    
     if (!isproceed) {
       toast.warning(errormessage);
     } else {
@@ -39,13 +39,13 @@ const Register = () => {
         isproceed = false;
         toast.warning("Please enter valid email");
       }
-    }
+    } 
     return isproceed;
   };
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    let regobj = { id, name, email, password, phone, gender };
+    let regobj = { id, name, email, password, gender };
     if (IsValidate()) {
       // console.log(regobj);
 
@@ -53,12 +53,10 @@ const Register = () => {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regobj),
-      })
-        .then((res) => {
+      }).then((res) => {
           toast.success("Registered successfully.");
           navigate("/login");
-        })
-        .catch((err) => {
+        }).catch((err) => {
           toast.err("Failed :" + err.message);
         });
     }
@@ -130,7 +128,7 @@ const Register = () => {
                   </div>
                 </div>
               </div>
-              <div className="row">
+              {/* <div className="row">
                 <div className="col-lg-12">
                   <div className="form-group">
                     <label>
@@ -143,7 +141,7 @@ const Register = () => {
                     ></input>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="col-lg-6">
                 <div className="form-group">
                   <label>Gender</label>

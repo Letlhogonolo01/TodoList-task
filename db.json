@@ -1,75 +1,17 @@
 {
   "user": [
     {
-      "id": "Tlhogi",
-      "name": "Letlhogonolo Tee",
-      "email": "tee@gmail.com",
-      "password": "123456",
-      "phone": "0123456789",
+      "id": "Adminuser",
+      "name": "Tlhogi M",
+      "email": "admin@gmail.com",
+      "password": "admin",
       "gender": "male"
     },
     {
-      "id": "Hloni",
-      "name": "Lehlohonolo Tee",
-      "email": "tee@gmail.com",
-      "password": "1234566",
-      "phone": "0123456789",
-      "gender": "female"
-    },
-    {
-      "id": "Tom",
-      "name": "Tomas ",
-      "email": "tomas@gmail.com",
-      "password": "12344",
-      "phone": "0987654321",
-      "gender": "male"
-    },
-    {
-      "id": "3U3iXgN",
-      "name": "",
-      "email": "",
-      "password": "",
-      "phone": "",
-      "gender": "male"
-    },
-    {
-      "id": "Tlhogi user",
-      "name": "",
-      "email": "",
-      "password": "",
-      "phone": "",
-      "gender": "male"
-    },
-    {
-      "id": "user",
-      "name": "",
-      "email": "",
-      "password": "",
-      "phone": "",
-      "gender": "male"
-    },
-    {
-      "id": "Hloni user",
-      "name": "Tommie",
-      "email": "toms@gmail.com",
-      "password": "",
-      "phone": "",
-      "gender": "male"
-    },
-    {
-      "id": "hgf",
-      "name": "",
-      "email": "",
-      "password": "",
-      "phone": "",
-      "gender": "male"
-    },
-    {
-      "id": "Tlhoks",
-      "name": "Letlhoks Sos",
-      "email": "tlhoks",
-      "password": "123456",
-      "phone": "0123456789",
+      "id": "testuser",
+      "name": "Queen Bee",
+      "email": "bee@gmail.com",
+      "password": "test",
       "gender": "female"
     }
   ]

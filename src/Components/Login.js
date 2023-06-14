@@ -1,25 +1,53 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
   const [username, usernameupdate] = useState("");
   const [password, passwordupdate] = useState("");
 
+  const usenavigate = useNavigate();
+
+  useEffect(() => {
+    sessionStorage.clear();
+  });
+
   const ProceedLogin = (e) => {
-    e.ProceedLogin();
+    e.preventDefault();
     if (validate()) {
-      //implimentation
-      console.log("proceed");
+      ///implimentation
+      // console.log('proceed');
+
+      fetch("http://localhost:8000/user/" + username)
+        .then((res) => {
+          return res.json();
+        })
+        .then((resp) => {
+          // console.log(resp)
+          if (Object.keys(resp).length === 0) {
+            toast.error("Please Enter valid username");
+          } else {
+            if (resp.password === password) {
+              toast.success("Success");
+              sessionStorage.setItem("username", username);
+              usenavigate("/");
+            } else {
+              toast.error("Please Enter valid password");
+            }
+          }
+        })
+        .catch((err) => {
+          toast.error("Login Failed due to :" + err.message);
+        });
     }
   };
   const validate = () => {
     let result = true;
-    if(username === '' || username === null) {
+    if (username === "" || username === null) {
       result = false;
       toast.warning("Please Enter Username");
     }
-    if(password === '' || password === null) {
+    if (password === "" || password === null) {
       result = false;
       toast.warning("Please Enter Password");
     }
@@ -50,6 +78,7 @@ const Login = () => {
                   Password <span className="errmsg">*</span>
                 </label>
                 <input
+                  type="password"
                   value={password}
                   onChange={(e) => passwordupdate(e.target.value)}
                   className="form-control"
@@ -58,10 +87,12 @@ const Login = () => {
             </div>
             <div className="card-footer">
               <button type="submit" className="btn btn-primary">
-                Login
+                {" "}
+                Login{" "}
               </button>{" "}
               |
               <Link className="btn btn-success" to={"/register"}>
+                {" "}
                 New User
               </Link>
             </div>
