@@ -55,13 +55,14 @@ const Login = () => {
   };
 
   return (
-    <div className="row">
-      <div className="offset-lg-3 col-lg-6">
+    <div className="TodoWrapper1">
+      <div className="offset-lg-1 col-lg-10">
         <form onSubmit={ProceedLogin} className="container">
-          <div className="card">
+          <div >
             <div className="card-header">
               <h2>User Login</h2>
             </div>
+            <br/>
             <div className="card-body">
               <div className="form-group">
                 <label>
@@ -73,6 +74,7 @@ const Login = () => {
                   className="form-control"
                 ></input>
               </div>
+              <br/>
               <div className="form-group">
                 <label>
                   Password <span className="errmsg">*</span>
@@ -85,6 +87,7 @@ const Login = () => {
                 ></input>
               </div>
             </div>
+            <br/>
             <div className="card-footer">
               <button type="submit" className="btn btn-primary">
                 {" "}

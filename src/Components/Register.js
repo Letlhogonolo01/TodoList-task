@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Register = () => {
@@ -63,13 +63,14 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <div className="offset-lg-3 col-lg-6">
+    <div className="TodoWrapper1">
+      <div className="offset-lg-1 col-lg-10">
         <form className="container" onSubmit={handlesubmit}>
-          <div className="card">
+          <div >
             <div className="card-header">
-              <h1>User Registration</h1>
+              <h2>User Registration</h2>
             </div>
+            <br/>
             <div className="card-body">
               <div className="row">
                 <div className="col-lg-12">
@@ -85,6 +86,7 @@ const Register = () => {
                   </div>
                 </div>
               </div>
+              <br/>
               <div className="row">
                 <div className="col-lg-12">
                   <div className="form-group">
@@ -99,6 +101,7 @@ const Register = () => {
                   </div>
                 </div>
               </div>
+              <br/>
               <div className="row">
                 <div className="col-lg-12">
                   <div className="form-group">
@@ -113,6 +116,7 @@ const Register = () => {
                   </div>
                 </div>
               </div>
+              <br/>
               <div className="row">
                 <div className="col-lg-12">
                   <div className="form-group">
@@ -128,20 +132,7 @@ const Register = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="row">
-                <div className="col-lg-12">
-                  <div className="form-group">
-                    <label>
-                      Phone Number <span className="errmsg">*</span>
-                    </label>
-                    <input
-                      value={phone}
-                      onChange={(e) => phonechange(e.target.value)}
-                      className="form-control"
-                    ></input>
-                  </div>
-                </div>
-              </div> */}
+              <br/>
               <div className="col-lg-6">
                 <div className="form-group">
                   <label>Gender</label>
@@ -167,11 +158,16 @@ const Register = () => {
                 </div>
               </div>
             </div>
+            <br/>
             <div className="card-footer">
               <button type="submit" className="btn btn-primary">
                 Register
               </button>{" "}
-              |<a className="btn btn-danger">Back</a>
+              |<Link className="btn btn-danger" to={"/login"}>
+                {" "}
+                Back
+              </Link>
+              {/* <a className="btn btn-danger">Back</a> */}
             </div>
           </div>
         </form>

@@ -13,7 +13,13 @@
       "email": "bee@gmail.com",
       "password": "test",
       "gender": "female"
+    },
+    {
+      "id": "adminn",
+      "name": "Joan williams",
+      "email": "joan@gmail.com",
+      "password": "12345",
+      "gender": "female"
     }
   ]
-
 }
