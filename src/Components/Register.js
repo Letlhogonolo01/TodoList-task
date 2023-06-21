@@ -45,7 +45,8 @@ const Register = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    let regobj = { id, name, email, password, gender };
+    let list = []
+    let regobj = { id, name, email, password, gender, list };
     if (IsValidate()) {
       // console.log(regobj);
 

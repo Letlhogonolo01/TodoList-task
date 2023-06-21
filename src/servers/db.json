@@ -1,0 +1,48 @@
+{
+  "user": [
+    {
+      "id": "Adminuser",
+      "name": "hgbc",
+      "email": "cv@gmail.com",
+      "password": "12345",
+      "gender": "female",
+      "list": []
+    },
+    {
+      "id": "testuser",
+      "name": "Queen Bee",
+      "email": "bee@gmail.com",
+      "password": "test",
+      "gender": "female"
+    },
+    {
+      "id": "adminn",
+      "name": "Joan williams",
+      "email": "joan@gmail.com",
+      "password": "12345",
+      "gender": "female"
+    },
+    {
+      "id": "usertest",
+      "name": "Wendy Williams ",
+      "email": "wendy@gmail.com",
+      "password": "tester",
+      "gender": "female"
+    },
+    {
+      "id": "bet",
+      "name": "Tom Jeff",
+      "email": "tom@gaim.com",
+      "password": "12345",
+      "gender": "male"
+    },
+    {
+      "id": "safe",
+      "name": "hgbc",
+      "email": "cv@gmail.com",
+      "password": "12345",
+      "gender": "female",
+      "list": []
+    }
+  ]
+}
